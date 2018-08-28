@@ -7,11 +7,13 @@
 # Copyright 2017 Factor Libre - Ismael Calvo
 # Copyright 2017 Otherway - Pedro Rodríguez Gil
 # Copyright 2017 Tecnativa - Pedro M. Baeza
+# Copyright 2018 Javi Melendez <javimelex@gmail.com>
+# Copyright 2018 Angel Moya <angel.moya@pesol.es>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Suministro Inmediato de Información en el IVA",
-    "version": "10.0.2.1.5",
+    "name": u"Suministro Inmediato de Información en el IVA",
+    "version": "10.0.3.3.0",
     "category": "Accounting & Finance",
     "website": "https://odoospain.odoo.com",
     "author": "Acysos S.L.,"
@@ -22,10 +24,15 @@
               "Comunitea,"
               "Otherway,"
               "Tecnativa,"
+              "Javi Melendez,"
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "development_status": "Production/Stable",
+    "maintainers": [
+        'pedrobaeza',
+    ],
     "external_dependencies": {
         "python": [
             "zeep",
@@ -40,6 +47,7 @@
     ],
     "data": [
         "data/ir_config_parameter.xml",
+        "data/aeat_sii_tax_agency_data.xml",
         "views/res_company_view.xml",
         "views/account_invoice_view.xml",
         "views/aeat_sii_view.xml",
@@ -56,6 +64,7 @@
         "views/queue_job_views.xml",
         "views/account_fiscal_position_view.xml",
         "views/res_partner_views.xml",
+        "views/aeat_sii_tax_agency_view.xml",
     ],
     "post_init_hook": "add_key_to_existing_invoices",
 }
